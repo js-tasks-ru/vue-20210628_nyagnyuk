@@ -1,3 +1,19 @@
-// import { createApp } from './vendor/vue.esm-browser.js';
+import { createApp, defineComponent } from './vendor/vue.esm-browser.js';
 
-// Создайте Vue приложение
+
+const Counter = {
+  data() {
+    return {
+      counter: 0,
+    }
+  },
+
+  methods: {
+    clickCounter() {
+      this.counter++
+    }
+  }
+}
+
+const app = createApp(Counter);
+const vm = app.mount('#app');
