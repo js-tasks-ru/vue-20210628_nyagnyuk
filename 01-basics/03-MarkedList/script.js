@@ -34,17 +34,16 @@ const MarkedList = {
     return {
       emails,
       inputStr: '',
-      flagList: [],
+
     }
   },
   computed: {
     filteredList() {
-        this.flagList = emails.map(email => ({
-          email:email,
-          flag:this.inputStr ? email.includes(this.inputStr) : false,
-        }))
-      // console.log(this.flagList)
-      return this.flagList;
+      let flagList = emails.map(email => ({
+        email:email,
+        flag:this.inputStr ? email.includes(this.inputStr) : false,
+      }))
+      return flagList;
     }
   },
 }

@@ -20,8 +20,8 @@
         </div>
         <ul>
           <li v-for='item in filteredList'
-              :class="{'marked' : item.flag === true}"
-          >{{item.email}}</li>
+              :class="{'marked' : item.flag}"
+          >{{ item.email }}</li>
         </ul>
       </div>
     </div>

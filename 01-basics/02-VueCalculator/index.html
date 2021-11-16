@@ -37,33 +37,29 @@
         </div>
 
         <div class="col" style="display: flex; flex-direction: column; font-family: emoji">
-          <label for="sum">
-            <input id="sum"
-                   type="radio"
+          <label>
+            <input type="radio"
                    value="sum"
-                   @click="add"
                    v-model="picked"
+                   @change="resultCalc"
             /> ➕</label>
-          <label for="subtract">
-            <input id="subtract"
-                   type="radio"
+          <label>
+            <input type="radio"
                    value="subtract"
-                   @click="subtract"
                    v-model="picked"
+                   @change="resultCalc"
             /> ➖</label>
-          <label for="multiply">
-            <input id="multiply"
-                   type="radio"
+          <label>
+            <input type="radio"
                    value="multiply"
-                   @click="multiply"
                    v-model="picked"
+                   @change="resultCalc"
             /> ✖</label>
-          <label for="divide">
-            <input id="divide"
-                   type="radio"
+          <label>
+            <input type="radio"
                    value="divide"
-                   @click="divide"
                    v-model="picked"
+                   @change="resultCalc"
             /> ➗</label>
         </div>
 
@@ -74,7 +70,7 @@
 
         <div class="col">=</div>
 
-        <output class="col">{{result}}</output>
+        <output class="col">{{ result }}</output>
       </div>
     </div>
 

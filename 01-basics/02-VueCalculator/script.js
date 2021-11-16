@@ -10,46 +10,19 @@ const Calc = {
     }
   },
 
-  methods: {
-    add(){
-      this.result = this.numberFirst + this.numberSecond;
-    },
-    subtract(){
-      this.result = this.numberFirst - this.numberSecond;
-    },
-    multiply(){
-      this.result = this.numberFirst * this.numberSecond;
-    },
-    divide(){
-      this.result = this.numberFirst / this.numberSecond;
-    },
-
-    resultCalc(){
+  computed: {
+    resultCalc: function(){
       if(this.picked == "sum"){
-        this.add();
+        this.result = this.numberFirst + this.numberSecond;
       }
       if(this.picked == "subtract"){
-        this.subtract();
+        this.result = this.numberFirst - this.numberSecond;
       }
       if(this.picked == "multiply"){
-        this.multiply();
+        this.result = this.numberFirst * this.numberSecond;
       }
       if(this.picked == "divide"){
-        this.divide();
-      }
-    },
-  },
-  watch: {
-    numberFirst: {
-      immediate: true,
-      handler() {
-        this.resultCalc();
-      }
-    },
-    numberSecond: {
-      immediate: true,
-      handler() {
-        this.resultCalc();
+        this.result = this.numberFirst / this.numberSecond;
       }
     },
   }
