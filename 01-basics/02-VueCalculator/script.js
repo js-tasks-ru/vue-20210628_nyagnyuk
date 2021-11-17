@@ -5,24 +5,24 @@ const Calc = {
     return {
       numberFirst: '',
       numberSecond: '',
-      result: '',
       picked: '',
     }
   },
 
   computed: {
     resultCalc: function(){
+      let result;
       if(this.picked == "sum"){
-        this.result = this.numberFirst + this.numberSecond;
+        return result = this.numberFirst + this.numberSecond;
       }
       if(this.picked == "subtract"){
-        this.result = this.numberFirst - this.numberSecond;
+        return result = this.numberFirst - this.numberSecond;
       }
       if(this.picked == "multiply"){
-        this.result = this.numberFirst * this.numberSecond;
+        return result = this.numberFirst * this.numberSecond;
       }
       if(this.picked == "divide"){
-        this.result = this.numberFirst / this.numberSecond;
+        return result = this.numberFirst / this.numberSecond;
       }
     },
   }

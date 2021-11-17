@@ -41,25 +41,21 @@
             <input type="radio"
                    value="sum"
                    v-model="picked"
-                   @change="resultCalc"
             /> ➕</label>
           <label>
             <input type="radio"
                    value="subtract"
                    v-model="picked"
-                   @change="resultCalc"
             /> ➖</label>
           <label>
             <input type="radio"
                    value="multiply"
                    v-model="picked"
-                   @change="resultCalc"
             /> ✖</label>
           <label>
             <input type="radio"
                    value="divide"
                    v-model="picked"
-                   @change="resultCalc"
             /> ➗</label>
         </div>
 
@@ -70,7 +66,7 @@
 
         <div class="col">=</div>
 
-        <output class="col">{{ result }}</output>
+        <output class="col">{{ resultCalc }}</output>
       </div>
     </div>
 

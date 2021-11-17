@@ -11,13 +11,13 @@
           <input type="radio"
                  :value="n"
                  v-model.number="radioCheck"
-                 @click="fetchMeetupById(n)"/>
+          />
           {{ n }}
         </label>
 
         <hr />
 
-        <h3>{{ meetup.title}}</h3>
+        <h3>{{ resultTitle() }}</h3>
 
         <div></div>
       </div>
