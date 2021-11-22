@@ -11,18 +11,17 @@ const Calc = {
 
   computed: {
     resultCalc: function(){
-      let result;
       if(this.picked == "sum"){
-        return result = this.numberFirst + this.numberSecond;
+        return this.numberFirst + this.numberSecond;
       }
       if(this.picked == "subtract"){
-        return result = this.numberFirst - this.numberSecond;
+        return this.numberFirst - this.numberSecond;
       }
       if(this.picked == "multiply"){
-        return result = this.numberFirst * this.numberSecond;
+        return this.numberFirst * this.numberSecond;
       }
       if(this.picked == "divide"){
-        return result = this.numberFirst / this.numberSecond;
+        return this.numberFirst / this.numberSecond;
       }
     },
   }

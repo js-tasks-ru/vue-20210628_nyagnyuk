@@ -27,20 +27,18 @@ const MeetupTitle = {
     radioCheck: {
       immediate: true,
       handler() {
-        this.resultTitle();
+        fetchMeetupById(this.radioCheck).then(response => this.title = response.title);
+        // this.resultTitle();
       }
     }
   },
 
-  methods: {
-    resultTitle: function() {
-      fetchMeetupById(this.radioCheck).then(response => this.title = response.title);
-      // console.log(this.title)
-      return this.title;
-    }
-  }
+//   methods: {
+//     resultTitle: function() {
+//       fetchMeetupById(this.radioCheck).then(response => this.title = response.title);
+//     }
+//   }
 }
 
 const app =createApp(MeetupTitle);
 const vm = app.mount('#app');
-
